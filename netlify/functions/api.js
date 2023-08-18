@@ -16,6 +16,7 @@ const log = (a) => {
 router.post("/", (req, res) => {
   const referer = req.headers.referer || req.headers.referrer;
   log("Referer:" + referer);
+  log("body: ", JSON.stringify(req.body))
   res.send("Referer logged");
 });
 router.get("/log", (req, res) => {
