@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const port = process.env.port || 3000;
 
-app.get("/", (req, res) => {
+app.post("/", (req, res) => {
   const referer = req.headers.referer || req.headers.referrer;
   console.log("Referer:", referer);
   res.send("Referer logged");
