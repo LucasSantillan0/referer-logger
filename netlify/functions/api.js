@@ -5,7 +5,6 @@ const api = express();
 
 const router = Router();
 
-
 api.use("/api/", router);
 
 const logs = [];
@@ -16,7 +15,10 @@ const log = (a) => {
 router.post("/", (req, res) => {
   const referer = req.headers.referer || req.headers.referrer;
   log("Referer:" + referer);
-  log("body: ", JSON.stringify(req.body))
+  log("body: ", JSON.stringify(req.body));
+  if (!body) {
+    log("NO BODY");
+  }
   res.send("Referer logged");
 });
 router.get("/log", (req, res) => {
