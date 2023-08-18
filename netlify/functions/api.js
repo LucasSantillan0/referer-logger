@@ -16,7 +16,7 @@ const log = (a) => {
 router.post("/", (req, res) => {
   const referer = req.headers.referer || req.headers.referrer;
   log("Referer:" + referer);
-  log("body: ", JSON.stringify(req.body));
+  log("body: " + JSON.stringify(req.body));
   if (!body) {
     log("NO BODY");
   }
