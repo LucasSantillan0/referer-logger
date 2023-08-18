@@ -5,6 +5,7 @@ const api = express();
 
 const router = Router();
 
+app.use(express.json());
 api.use("/api/", router);
 
 const logs = [];
